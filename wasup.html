@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的互動式網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            display: none;
+        }
+
+        .japanese-section {
+            margin-top: 40px;
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 8px;
+            animation: fadeIn 2s ease-in forwards;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #0097a7;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>歡迎來到我的網站</h1>
+    </header>
+
+    <main>
+        <p class="fade-in">這是一個簡單的 HTML 網頁範例！</p>
+        <p class="fade-in">你可以在這裡放任何內容。</p>
+
+        <button onclick="showMessage()">點我顯示歡迎訊息</button>
+        <div id="message">你好！很高興你來到這裡 😊</div>
+
+        <!-- 日文學習區塊 -->
+        <div class="japanese-section">
+            <h2>🇯🇵 想去日本嗎？來學幾句簡單的日文吧！</h2>
+            <table>
+                <tr>
+                    <th>中文</th>
+                    <th>日文</th>
+                    <th>發音</th>
+                </tr>
+                <tr>
+                    <td>你好</td>
+                    <td>こんにちは</td>
+                    <td>Kon-ni-chi-wa</td>
+                </tr>
+                <tr>
+                    <td>謝謝</td>
+                    <td>ありがとう</td>
+                    <td>A-ri-ga-tō</td>
+                </tr>
+                <tr>
+                    <td>廁所在哪裡？</td>
+                    <td>トイレはどこですか？</td>
+                    <td>To-i-re wa do-ko de-su-ka?</td>
+                </tr>
+                <tr>
+                    <td>我想去日本</td>
+                    <td>日本に行きたいです</td>
+                    <td>Ni-hon ni i-ki-ta-i de-su</td>
+                </tr>
+                <tr>
+                    <td>再見</td>
+                    <td>さようなら</td>
+                    <td>Sa-yō-na-ra</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 我的網站</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
